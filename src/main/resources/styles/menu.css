@@ -1,0 +1,51 @@
+.tabs {
+	display: flex;
+	min-width: 100%;
+	flex-flow: column wrap;
+}
+
+.tabs>label {
+	flex-grow: 1;
+	padding-left: 6px;
+	padding-right: 6px;
+	padding-bottom: 12px;
+	padding-top: 16px;
+	color: white;
+	letter-spacing: 0.1em;
+}
+
+.tabs>label:hover {
+	filter: brightness(90%);
+}
+
+.tabs>label.tab-selected {
+	filter: brightness(90%);
+	font-weight: bold;
+}
+
+/* unchecked tab */
+.tabs>label {
+	border-style: solid;
+	border-top-width: 0;
+	border-right-width: 0;
+	border-bottom-width: 0;
+	border-left-width: 0.5em;
+	border-color: #59663b;
+	background-color: rgb(134, 153, 89);
+}
+
+/* tab content: representing tab is unchecked */
+.tabs+.tabs-content>* {
+	display: none;
+	box-sizing: border-box;
+	background-color: #eaf7c4;
+	padding: 1em;
+}
+
+/* tab content: representing tab is checked */
+.tabs+.tabs-content>*.tab-content-selected {
+	display: block;
+	padding-top: 4em;
+	width: 100%;
+	height: 100%;
+}
