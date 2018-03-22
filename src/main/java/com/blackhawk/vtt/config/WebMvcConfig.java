@@ -20,7 +20,6 @@ import com.blackhawk.vtt.dao.VolunteerCredentialDAOImpl;
 @Configuration
 @EnableWebMvc
 @ComponentScan (basePackages={"com.blackhawk.vtt"})
-
 public class WebMvcConfig implements WebMvcConfigurer {
 	
 	@Bean
@@ -32,7 +31,8 @@ public class WebMvcConfig implements WebMvcConfigurer {
 	}
 
 	public void addResourceHandlers(ResourceHandlerRegistry registry) {
-		registry.addResourceHandler("/resources/**").addResourceLocations("/resources/");
+		registry.addResourceHandler("/css/**").addResourceLocations("classpath:/styles/");
+		registry.addResourceHandler("/js/**").addResourceLocations("classpath:/js/");
 	}
 	
 	@Bean

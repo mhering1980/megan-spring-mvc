@@ -1,13 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Volunteer Time Tracker</title>
-		<link rel="stylesheet" href="../styles/menu.css"/>
-		<link rel="stylesheet" href="../styles/main.css"/>
+		<link rel="stylesheet" href='<spring:url value="/css/menu.css" />' />
+		<link rel="stylesheet" href='<spring:url value="/css/main.css" />' />
 
-		<script src="js/function_showAjaxResultInMainElement.js"></script>
+		<script src='<spring:url value="/js/function_showAjaxResultInMainElement.js" />'></script>
 	</head>
 	<body style="padding:0; margin-top:0; margin-left:auto; margin-right:auto; box-sizing: border-box; margin-bottom:0;">
 		<header>

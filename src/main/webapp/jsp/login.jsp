@@ -1,22 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
-<%@taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Volunteer Tracking</title>
-		<spring:url value="/resources/styles/login.css" var="loginCss" />
-		<spring:url value="/resources/styles/normalize.css" var="normalizeCss" />
-		<spring:url value="/resources/styles/slicknav.css" var="slicknavCss" />
-		
-		<link rel="stylesheet" href="${loginCss}">
-		<link rel="stylesheet" href="${normalizeCss}">
-		<link rel="stylesheet" href="${slicknavCss}">
+
+		<link href='<spring:url value="/css/login.css"/>' rel="stylesheet" />
+		<link href='<spring:url value="/css/normalize.css" />' rel="stylesheet" />
+		<link href='<spring:url value="/css/slicknav.css" />' rel="stylesheet" />
 		<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
-		<script src="<c:url value="/resources/js/jquery.slicknav.min.js" />"></script>
+		<script type="text/javascript" src='<spring:url value="/js/jquery.slicknav.min.js" />' ></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
 			$('#nav_menu').slicknav({prependTo:"#mobile_menu"});
